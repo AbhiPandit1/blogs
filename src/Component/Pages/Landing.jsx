@@ -3,13 +3,8 @@ import './Landing.css';
 import { motion, useTime, useTransform } from 'framer-motion';
 
 const Landing = () => {
-  const [move, setMove] = useState(true);
-
-  function moveToggle() {
-    setMove(!move);
-  }
   const time = useTime();
-  const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: move });
+  const rotate = useTransform(time, [0, 50], [0, 1], { clamp: false });
 
   return (
     <div className="landing-main">
@@ -17,7 +12,7 @@ const Landing = () => {
         <h1 className="welcome-note">
           "Glad you're <br /> here!"
         </h1>
-        <p>Unleash Your Curiosity Here.</p>
+        <p className='para'>Unleash Your Curiosity Here.</p>
         <motion.button
           whileHover={{
             scale: 1.2,
@@ -29,23 +24,10 @@ const Landing = () => {
         </motion.button>
       </div>
       <div className="landing-right">
-        <motion.div style={{ rotate }} onMouseEnter={moveToggle}>
-          <img
-            decoding="async"
-            src="https://media-www.sqspcdn.com/images/pages/tour/blogs/hero/foreground-desktop-500w.jpg"
-            width="488"
-            height="300"
-            loading="eager"
+        <motion.div style={{ rotate }}>
+          <img className='landing-img'
+            src="https://media.istockphoto.com/id/543190650/photo/irobot-touch.jpg?s=1024x1024&w=is&k=20&c=9Qr5RamL2GyaWheOwwr5iRq2DXqkrCeEV_3PJaE1d6s="
             alt=""
-            srcset="
-          https://media-www.sqspcdn.com/images/pages/tour/blogs/hero/foreground-desktop-100w.jpg 100w,
-          https://media-www.sqspcdn.com/images/pages/tour/blogs/hero/foreground-desktop-300w.jpg 300w,
-          https://media-www.sqspcdn.com/images/pages/tour/blogs/hero/foreground-desktop-500w.jpg 500w,
-          https://media-www.sqspcdn.com/images/pages/tour/blogs/hero/foreground-desktop-750w.jpg 750w,
-          https://media-www.sqspcdn.com/images/pages/tour/blogs/hero/foreground-desktop-1000w.jpg 1000w,
-          https://media-www.sqspcdn.com/images/pages/tour/blogs/hero/foreground-desktop-1500w.jpg 1500w,
-          https://media-www.sqspcdn.com/images/pages/tour/blogs/hero/foreground-desktop-2500w.jpg 2500w"
-            sizes="(min-width: 1024px) 66.5vw, (min-width: 768px) 65vw, 100vw"
           />
         </motion.div>
       </div>

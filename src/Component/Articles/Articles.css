@@ -1,0 +1,74 @@
+.article-main {
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+.box {
+  width: 80vw;
+  height: 40vh;
+  border-bottom: 2px solid salmon;
+  border-top: 1px solid wheat;
+  margin: 4rem;
+  margin-left: 5rem;
+}
+.image-des {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image {
+  position: relative;
+  right: 0;
+  height: 10vh;
+  width: 5vw;
+  object-fit: cover;
+  padding: 1rem;
+}
+.heading {
+  display: flex;
+  justify-content: space-around;
+}
+.header {
+  display: inline-block;
+  text-transform: uppercase;
+}
+.header p {
+  font-size: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.type {
+  display: inline-block;
+  text-transform: uppercase;
+}
+.type p {
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.des {
+  margin-left: 8rem;
+}
+
+.des p {
+  width: 30vw;
+  height: 10vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.sub-category {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Articles.css */
+
+/* Existing styles for .article-main, .box, .image-des, .image, .heading, .header, .type, .des, .sub-category */
+
+/* Articles.css */
+
+/* Existing styles for .article-main, .box, .image-des, .image, .heading, .header, .type, .des, .sub-category */
